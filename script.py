@@ -5,7 +5,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 try:
-    response = requests.get('https://news.ycombinator.com', verify=False, timeout=10)
+    response = requests.get('https://news.ycombinator.com', verify=False, timeout=10) #подставляем свой сайт
     html = response.text
 except RequestException as e:
     print(f"Не удалось загрузить страницу: {e}")
